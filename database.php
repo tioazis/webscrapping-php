@@ -1,8 +1,5 @@
 <?php 
-    $host= "";
-    $username="";
-
-    $conn = mysqli_connect("localhost","root","","scraposase"); //localhost
+    require 'config.php';
     //$conn = mysqli_connect("10.32.221.186","root","","scraposase"); //server telkom
 
     function query($query){

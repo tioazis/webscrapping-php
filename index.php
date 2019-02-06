@@ -1,17 +1,17 @@
 <?php 
 require 'scrapper.php';
 require 'database.php';
+require 'config.php';
 
 
 
 // login into osase
-login('http://10.2.4.209/site/login','LoginForm[username]=830127&LoginForm[password]=Shaka777');
+login($loginSite, $loginData);
 
 //variabel
-$web = 'http://example.com'; //set your web here
 $st = '<table id="exam" class="table table-bordered table-striped table-hover" style="width:100%; margin-top: 10px;">'; //start
 $en = '</table>'; //end
-$html = grab_page($web); //get html text full
+$html = grab_page($scrapSite); //get html text full
 
 //selector table only
 $table1  = selector($html, $st, $en);
